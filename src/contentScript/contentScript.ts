@@ -1,2 +1,4 @@
-// TODO: content script
-console.log('Content Script running!')
+
+chrome.runtime.sendMessage("From the content script!", (resp) => {
+  console.log(resp)
+})

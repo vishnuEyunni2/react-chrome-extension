@@ -1,6 +1,6 @@
-// TODO: background script
-chrome.runtime.onInstalled.addListener(() => {
-  // TODO: on installed function
-})
 
-console.log('Background Script')
+chrome.runtime.onMessage.addListener((msg, sender, sendRepsonse) => {
+  console.log(msg)
+  console.log(sender)
+  sendRepsonse("From the background script!")
+})
